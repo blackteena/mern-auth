@@ -19,7 +19,7 @@ const userAuth = async (req, res, next) => {
         next();
 
     } catch (error) {
-        res.jpsn({ success: false, message: error.message });
+        res.json({ success: false, message: error.message });
     }
 }
 

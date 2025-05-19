@@ -1,6 +1,6 @@
 import express from 'express'
 import {register, login, logout, sendVerifyOtp, isAuthenticated, verifyEmail, sendResetOtp, resetPassword} from '../controllers/authController.js'
-import userAuth from './middleware/userAuth.js'
+import userAuth from '../middleware/userAuth.js'
 
 const authRouter=express.Router()
 
@@ -14,3 +14,5 @@ authRouter.post('/send-reset-otp', sendResetOtp)
 authRouter.post('/reset-password', resetPassword)
 
 export default authRouter
+
+
